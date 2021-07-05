@@ -42,6 +42,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
 nav {
   width: 35%;
 }
@@ -68,6 +73,11 @@ nav ul li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.wb-body {
+  background-color: #111;
+  padding: 20px;
 }
 
 .hidden {
