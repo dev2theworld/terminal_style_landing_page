@@ -63,50 +63,108 @@ main {
   margin-top: 100px;
 }
 
-.main-line {
-  
+.first-line,
+.second-line,
+.third-line {
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid var(--text-color);
   transform: translateY(-50%);
 }
 
-.animate-typewriter {
-  animation: typewriter 3s steps(24) 1s 1 normal both, blinkTextCursor 1s steps(24) infinite normal;
+.first-line {
+  border-right: 3px solid var(--text-color);
 }
 
-@keyframes typewriter{
+.second-line {
+  border-right: 3px solid var(--text-color);
+  opacity: 0;
+}
+
+.third-line {
+  border-right: 3px solid #ccc;
+  opacity: 0;
+}
+
+.animate-typewriter-1 {
+  animation: typewriter-1 3s steps(12) 1s 1 normal both, blinkTextCursor 3s steps(12) forwards normal;
+}
+
+.animate-typewriter-2 {
+  animation: cursorInvisible 1s forwards, typewriter-2 3s steps(19) 1s 1 normal both, blinkTextCursor 3s steps(19) forwards normal;
+  animation-delay: 4s;
+}
+
+.animate-typewriter-3 {
+  animation: cursorInvisible 1s forwards, typewriter-3 3s steps(18) 1s 1 normal both, blinkTextCursorWhite 3s steps(18) forwards normal;
+  animation-delay:7s;
+}
+
+@keyframes cursorInvisible {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes typewriter-1 {
   from{width: 0;}
-  to{width: 100%;}
+  to{width: 12ch;}
+}
+
+@keyframes typewriter-2 {
+  from{width: 0;}
+  to{width: 19ch;}
+}
+
+@keyframes typewriter-3 {
+  from{width: 0;}
+  to{width: 18ch;}
 }
 
 @keyframes blinkTextCursor{
-  from{border-right-color: var(--text-color);}
-  to{border-right-color: transparent;}
+  0% {border-right-color: transparent;}
+  12% {border-right-color: var(--text-color);}
+  25% {border-right-color: transparent;}
+  37% {border-right-color: var(--text-color);}
+  50% {border-right-color: transparent;}
+  62% {border-right-color: var(--text-color);}
+  75% {border-right-color: transparent;}
+  87% {border-right-color: var(--text-color);}
+  100% {border-right-color: transparent;}
+}
+
+@keyframes blinkTextCursorWhite {
+  0% {border-right-color: transparent;}
+  12% {border-right-color: #ccc;}
+  25% {border-right-color: transparent;}
+  37% {border-right-color: #ccc;}
+  50% {border-right-color: transparent;}
+  62% {border-right-color: #ccc;}
+  75% {border-right-color: transparent;}
+  87% {border-right-color: #ccc;}
+  100% {border-right-color: transparent;}
 }
 
 #home {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 3s;
+  animation-delay: 10s;
 }
 
 #about {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 4s;
+  animation-delay: 11s;
 }
 
 #gallery {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 5s;
+  animation-delay: 12s;
 }
 
 #contact {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 6s;
+  animation-delay: 13s;
 }
 
 @keyframes appear {
@@ -115,10 +173,12 @@ main {
 }
 
 h2 {
+  max-width: 33%;
   color: var(--text-color);
 }
 
 h3 {
+  max-width: 26%;
   margin-bottom: 15px;
 }
 
