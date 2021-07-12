@@ -32,10 +32,20 @@ nav {
   margin-top: 20px;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  list-style: none;
 }
 
 nav ul li {
@@ -47,11 +57,33 @@ nav ul li:hover {
   opacity: 0.75;
 }
 
-h1 {
-  max-width: 35%;
-  color: var(--text-color);
-  font-size: 50px;
-  letter-spacing: -2px;
+#home {
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 10s;
+}
+
+#about {
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 11s;
+}
+
+#gallery {
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 12s;
+}
+
+#contact {
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 13s;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 main {
@@ -60,7 +92,27 @@ main {
   align-items: center;
   justify-content: center;
   width: 75%;
-  margin-top: 100px;
+  height: 80%;
+}
+
+h1 {
+  max-width: 34%;
+  color: var(--text-color);
+  font-size: 50px;
+  letter-spacing: -2px;
+}
+
+h2 {
+  color: var(--text-color);
+}
+
+h2.two {
+  max-width: 33%;
+}
+
+h3 {
+  max-width: 25.5%;
+  margin-bottom: 15px;
 }
 
 .first-line,
@@ -71,22 +123,22 @@ main {
   transform: translateY(-50%);
 }
 
-.first-line {
-  border-right: 3px solid var(--text-color);
+.first-line,
+.second-line {
+  border-right: 0.25ch solid var(--text-color);
 }
 
-.second-line {
-  border-right: 3px solid var(--text-color);
+.second-line,
+.third-line {
   opacity: 0;
 }
 
 .third-line {
-  border-right: 3px solid #ccc;
-  opacity: 0;
+  border-right: 0.25ch solid #ccc;
 }
 
 .animate-typewriter-1 {
-  animation: typewriter-1 3s steps(12) 1s 1 normal both, blinkTextCursor 3s steps(12) forwards normal;
+  animation: typewriter-1 3s steps(12) 1s 1 normal both, blinkTextCursor 4s steps(12) forwards normal;
 }
 
 .animate-typewriter-2 {
@@ -97,11 +149,6 @@ main {
 .animate-typewriter-3 {
   animation: cursorInvisible 1s forwards, typewriter-3 3s steps(18) 1s 1 normal both, blinkTextCursorWhite 3s steps(18) forwards normal;
   animation-delay:7s;
-}
-
-@keyframes cursorInvisible {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 @keyframes typewriter-1 {
@@ -143,62 +190,15 @@ main {
   100% {border-right-color: transparent;}
 }
 
-#home {
-  opacity: 0;
-  animation: appear 3s forwards;
-  animation-delay: 10s;
-}
-
-#about {
-  opacity: 0;
-  animation: appear 3s forwards;
-  animation-delay: 11s;
-}
-
-#gallery {
-  opacity: 0;
-  animation: appear 3s forwards;
-  animation-delay: 12s;
-}
-
-#contact {
-  opacity: 0;
-  animation: appear 3s forwards;
-  animation-delay: 13s;
-}
-
-@keyframes appear {
+@keyframes cursorInvisible {
   from {opacity: 0;}
   to {opacity: 1;}
-}
-
-h2 {
-  max-width: 33%;
-  color: var(--text-color);
-}
-
-h3 {
-  max-width: 26%;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: none;
 }
 
 p {
   margin: 20px 0;
   font-size: 18px;
 }
-
-
-
-
 
 .wb-body {
   background-color: #111;
