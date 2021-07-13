@@ -29,7 +29,7 @@ body {
 
 nav {
   width: 35%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 ul {
@@ -57,28 +57,22 @@ nav ul li:hover {
   opacity: 0.75;
 }
 
-#home {
+#about {
   opacity: 0;
   animation: appear 3s forwards;
   animation-delay: 10s;
 }
 
-#about {
+#projects {
   opacity: 0;
   animation: appear 3s forwards;
   animation-delay: 11s;
 }
 
-#gallery {
-  opacity: 0;
-  animation: appear 3s forwards;
-  animation-delay: 12s;
-}
-
 #contact {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 13s;
+  animation-delay: 12s;
 }
 
 @keyframes appear {
