@@ -32,20 +32,6 @@ nav {
   margin-top: 30px;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--text-color);
-  font-weight: bold;
-}
-
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -194,10 +180,7 @@ h3 {
   to {opacity: 1;}
 }
 
-p {
-  margin: 20px 0;
-  font-size: 18px;
-}
+
 
 .wb-body {
   background-color: #111;
@@ -206,6 +189,30 @@ p {
 
 .hidden {
   display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul#projects-list li {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+ul#projects-list li p {
+  font-size: 12px;
+  margin-left: 50px;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00aa00;
 }
 
 /*.cursor {
