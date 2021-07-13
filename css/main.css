@@ -37,8 +37,13 @@ ul {
 }
 
 a {
-  color: var(--text-color);
+  color: #ccc;
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 nav ul {
