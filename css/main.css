@@ -7,13 +7,15 @@
 }
 
 :root {
-  --text-color: #03A062;
+  --main-green: #03A062;
+  --secondary-green: #00aa00;
+  --white-text: #ccc;
 }
 
 body {
   font-family: 'Orbitron', sans-serif;
   background-color: #222;
-  color: #ccc;
+  color: var(--white-text);
   line-height: 1.8;
   font-size: 20px;
 }
@@ -45,26 +47,26 @@ nav ul li {
 }
 
 nav ul li:hover {
-  color: var(--text-color);
+  color: var(--main-green);
   opacity: 0.75;
 }
 
 #about {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 13s;
+  animation-delay: 11s;
 }
 
 #projects {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 14s;
+  animation-delay: 12s;
 }
 
 #contact {
   opacity: 0;
   animation: appear 3s forwards;
-  animation-delay: 15s;
+  animation-delay: 13s;
 }
 
 @keyframes appear {
@@ -76,62 +78,74 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-top: 100px;
   width: 80%;
   height: 70%;
 }
 
 h1 {
-  max-width: 32.25%;
-  color: var(--text-color);
-  font-size: 50px;
+  max-width: 39%;
+  color: var(--main-green);
+  font-size: 60px;
   letter-spacing: -2px;
 }
 
 h2 {
-  color: var(--text-color);
+  color: var(--main-green);
 }
 
 h2.two {
   max-width: 31%;
+  color: var(--white-text);
+  margin-top: -40px;
+  margin-bottom: 60px;
+}
+
+.logo-appear {
+  opacity: 0;
+  animation: appear 3s forwards;
+  animation-delay: 7s;
 }
 
 h3 {
   max-width: 24.25%;
-  margin-bottom: 15px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--secondary-green);
 }
 
 .first-line,
 .second-line,
-.third-line,
 .fourth-line {
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
 }
 
-.first-line,
-.second-line {
-  border-right: 0.25ch solid var(--text-color);
+.first-line {
+  border-right: 0.25ch solid var(--main-green);
 }
 
-.second-line,
+/* .second-line,
 .third-line {
   opacity: 0;
+} */
+
+.second-line {
+  opacity: 0;
+  border-right: 0.25ch solid var(--white-text);
 }
 
-.third-line {
-  border-right: 0.25ch solid #ccc;
-}
+/* .third-line {
+  border-right: 0.25ch solid var(--secondary-green);
+} */
 
 .animate-typewriter-1 {
   animation: typewriter-1 3s steps(12) 1s 1 normal both, blinkTextCursor 4s steps(12) forwards normal;
 }
 
 .animate-typewriter-2 {
-  animation: cursorInvisible 1s forwards, typewriter-2 3s steps(19) 1s 1 normal both, blinkTextCursor 3s steps(19) forwards normal;
+  animation: cursorInvisible 1s forwards, typewriter-2 3s steps(19) 1s 1 normal both, blinkTextCursorWhite 3s steps(19) forwards normal;
   animation-delay: 4s;
 }
 
@@ -141,41 +155,41 @@ h3 {
 }
 
 @keyframes typewriter-1 {
-  from{width: 0;}
-  to{width: 12ch;}
+  from {width: 0;}
+  to {width: 12ch;}
 }
 
 @keyframes typewriter-2 {
-  from{width: 0;}
-  to{width: 19ch;}
+  from {width: 0;}
+  to {width: 19ch;}
 }
 
 @keyframes typewriter-3 {
-  from{width: 0;}
-  to{width: 18ch;}
+  from {width: 0;}
+  to {width: 18ch;}
 }
 
 @keyframes blinkTextCursor{
   0% {border-right-color: transparent;}
-  12% {border-right-color: var(--text-color);}
+  12% {border-right-color: var(--main-green);}
   25% {border-right-color: transparent;}
-  37% {border-right-color: var(--text-color);}
+  37% {border-right-color: var(--main-green);}
   50% {border-right-color: transparent;}
-  62% {border-right-color: var(--text-color);}
+  62% {border-right-color: var(--main-green);}
   75% {border-right-color: transparent;}
-  87% {border-right-color: var(--text-color);}
+  87% {border-right-color: var(--main-green);}
   100% {border-right-color: transparent;}
 }
 
 @keyframes blinkTextCursorWhite {
   0% {border-right-color: transparent;}
-  12% {border-right-color: #ccc;}
+  12% {border-right-color: var(--white-text);}
   25% {border-right-color: transparent;}
-  37% {border-right-color: #ccc;}
+  37% {border-right-color: var(--white-text);}
   50% {border-right-color: transparent;}
-  62% {border-right-color: #ccc;}
+  62% {border-right-color: var(--white-text);}
   75% {border-right-color: transparent;}
-  87% {border-right-color: #ccc;}
+  87% {border-right-color: var(--white-text);}
   100% {border-right-color: transparent;}
 }
 
@@ -195,12 +209,12 @@ footer {
 
 .fourth-line {
   opacity: 0;
-  border-right: 0.25ch solid #ccc;
+  border-right: 0.25ch solid var(--white-text);
 }
 
 .animate-typewriter-4 {
   animation: cursorInvisible 1s forwards, typewriter-3 3s steps(19) 1s 1 normal both, blinkTextCursorWhite 3s steps(19) forwards normal;
-  animation-delay:10s;
+  animation-delay: 8s;
 }
 
 
@@ -230,12 +244,12 @@ ul#projects-list li p {
 }
 
 a {
-  color: #ccc;
+  color: var(--white-text);
   text-decoration: none;
 }
 
 a:hover {
-  color: #00aa00;
+  color: var(--secondary-green);
 }
 
 /*.cursor {
